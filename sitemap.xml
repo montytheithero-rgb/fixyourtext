@@ -1,21 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <!-- Homepage -->
     <url>
         <loc>https://fixyourtext.com/</loc>
-        <lastmod>2025-01-09</lastmod>
+        <lastmod>2025-12-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
+
+    <!-- List Tools Category -->
+    <url>
+        <loc>https://fixyourtext.com/tools/list-tools/</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Text Formatting Category -->
+    <url>
+        <loc>https://fixyourtext.com/tools/text-formatting/</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- List Tools (10 tools) -->
+    <url>
+        <loc>https://fixyourtext.com/tools/list-tools/alphabetize-list.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/list-tools/clean-empty-lines.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/list-tools/extract-emails.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/list-tools/extract-urls.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/list-tools/filter-lines-by-keyword.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/list-tools/merge-split-lines.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/list-tools/randomize-lines.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/list-tools/remove-duplicate-lines.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/list-tools/reverse-list.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/list-tools/sort-lines.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Text Formatting Tools (11 tools) -->
+    <url>
+        <loc>https://fixyourtext.com/tools/text-formatting/case-converter.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/text-formatting/escape-unescape-html.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/text-formatting/remove-emojis.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/text-formatting/remove-extra-spaces.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/text-formatting/remove-line-breaks.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/text-formatting/remove-numbers.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/text-formatting/remove-punctuation.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/text-formatting/reverse-text.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/text-formatting/strip-html.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/text-formatting/text-repeater.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fixyourtext.com/tools/text-formatting/trim-whitespace.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Info Pages -->
     <url>
         <loc>https://fixyourtext.com/privacy.html</loc>
-        <lastmod>2025-01-09</lastmod>
+        <lastmod>2025-12-21</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.6</priority>
     </url>
+
     <url>
         <loc>https://fixyourtext.com/terms.html</loc>
-        <lastmod>2025-01-09</lastmod>
+        <lastmod>2025-12-21</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.6</priority>
     </url>
+
+    <url>
+        <loc>https://fixyourtext.com/contact.html</loc>
+        <lastmod>2025-12-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
 </urlset>
