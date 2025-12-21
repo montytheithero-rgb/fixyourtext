@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact FixYourText. Questions or feedback? Reach out to us here.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/contact.html">
+    
+    <title>Contact Us | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header></header>
+
+    <main>
+        <div class="policy-container">
+            <h1>Contact Us</h1>
+            <p>Have a question, suggestion, or issue? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <form id="contactForm" class="contact-form">
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            placeholder="John Doe"
+                            aria-required="true"
+                        >
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email">Your Email *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            placeholder="you@example.com"
+                            aria-required="true"
+                        >
+                    </div>
+
+                    <!-- Subject Field -->
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            required 
+                            placeholder="e.g., Bug Report, Feature Request, General Question"
+                            aria-required="true"
+                        >
+                    </div>
+
+                    <!-- Message Field -->
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="6" 
+                            required 
+                            placeholder="Tell us what you think..."
+                            aria-required="true"
+                        ></textarea>
+                    </div>
+
+                    <!-- Simple Math CAPTCHA -->
+                    <div class="form-group captcha-group">
+                        <label for="captcha">Verification: <span id="captchaQuestion">What is 5 + 3?</span> *</label>
+                        <input 
+                            type="number" 
+                            id="captcha" 
+                            name="captcha" 
+                            required 
+                            placeholder="Enter the answer"
+                            aria-required="true"
+                        >
+                        <small>This helps us prevent spam.</small>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-button">Send Message</button>
+
+                    <!-- Success/Error Messages -->
+                    <div id="formMessage" class="form-message" style="display: none;"></div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/contact.js"></script>
+</body>
+</html>

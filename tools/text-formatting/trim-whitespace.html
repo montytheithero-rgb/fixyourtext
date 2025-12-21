@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free whitespace trimmer to remove extra spaces. No signup, no tracking. Works instantly in browser.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/text-formatting/trim-whitespace.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Trim Whitespace — Remove Leading & Trailing Spaces | FixYourText">
+    <meta property="og:description" content="Remove leading and trailing whitespace from text. Fast, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/text-formatting/trim-whitespace.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Trim Whitespace",
+        "description": "Remove leading and trailing whitespace from text. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/text-formatting/trim-whitespace.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "Text Formatting", "item": "https://fixyourtext.com/tools/text-formatting/"},
+                {"@type": "ListItem", "position": 4, "name": "Trim Whitespace", "item": "https://fixyourtext.com/tools/text-formatting/trim-whitespace.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Trim Whitespace – Remove Extra Spaces | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/text-formatting/">Text Formatting</a>
+                <span>/</span>
+                <span>Trim Whitespace</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Trim Whitespace from Text</h1>
+
+            <p class="tool-description">Remove leading and trailing whitespace (spaces, tabs, line breaks) from your text and each line.</p>
+
+            <div class="tool-intro">
+                <p>
+                This free whitespace trimmer tool removes leading and trailing spaces instantly. It is useful for data managers, developers, and anyone cleaning up text with excess whitespace. The tool preserves internal spacing while removing unwanted leading and trailing characters from text. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Paste your text here:</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter or paste your text here..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Trim Options:</h2>
+                    <div class="button-group">
+                        <button id="trimAllBtn" class="btn-primary" data-action="all">
+                            Trim All
+                        </button>
+                        <button id="trimStartBtn" class="btn-primary" data-action="start">
+                            Trim Start
+                        </button>
+                        <button id="trimEndBtn" class="btn-primary" data-action="end">
+                            Trim End
+                        </button>
+                    </div>
+
+                    <h2 style="margin-top: var(--spacing-lg);">Options:</h2>
+<div class="checkbox-group">
+    <label class="checkbox-label">
+        <input type="checkbox" id="eachLineCheckbox" checked>
+        <span>Trim Each Line</span>
+    </label>
+    <p class="checkbox-help">When checked, removes whitespace from the start and end of each line</p>
+</div>
+
+<div class="checkbox-group">
+    <label class="checkbox-label">
+        <input type="checkbox" id="collapseSpacesCheckbox">
+        <span>Collapse Internal Spaces</span>
+    </label>
+    <p class="checkbox-help">When checked, replaces multiple spaces between words with single space</p>
+</div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Result:</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="Trimmed text will appear here..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Paste or type your text in the input area</li>
+                    <li>Choose a trim option (All, Start, or End)</li>
+                    <li>Optionally enable "Trim Each Line" to trim individual lines</li>
+                    <li>See the result instantly</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>Trim Options Explained:</h2>
+                <ul>
+                    <li><strong>Trim All:</strong> Remove whitespace from both start and end</li>
+                    <li><strong>Trim Start:</strong> Remove whitespace from the beginning only</li>
+                    <li><strong>Trim End:</strong> Remove whitespace from the end only</li>
+                </ul>
+
+                <h2>Difference from "Remove Extra Spaces":</h2>
+                <ul>
+                    <li><strong>Trim Whitespace:</strong> Removes leading/trailing spaces only. Does NOT collapse internal spaces.</li>
+                    <li><strong>Remove Extra Spaces:</strong> Collapses multiple internal spaces AND trims. Removes more.</li>
+                </ul>
+
+                <h2>Example:</h2>
+                <p><strong>Input:</strong> <code>"   hello   world   "</code></p>
+                <p><strong>Output (Trim All):</strong> <code>"hello   world"</code></p>
+                <p><em>Notice: Internal spaces are preserved, only leading/trailing removed.</em></p>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Trim all</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/text-formatting/remove-extra-spaces.html">Remove Extra Spaces</a></li>
+                    <li><a href="/tools/text-formatting/remove-line-breaks.html">Remove Line Breaks</a></li>
+                    <li><a href="/tools/text-formatting/case-converter.html">Case Converter</a></li>
+                </ul>
+
+                <h2>Why Use the Trim Whitespace Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your text stays private</li>
+                    <li>Removes leading and trailing spaces only</li>
+                    <li>Preserves internal spacing between words</li>
+                    <li>Perfect for data cleaning and normalization</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-text-formatting.js"></script>
+</body>
+</html>

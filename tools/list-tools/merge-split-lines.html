@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free merge/split tool to convert CSV to lines or join lines. No signup, no tracking. Works instantly.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/list-tools/merge-split-lines.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Merge/Split Lines — Join or Separate Lines | FixYourText">
+    <meta property="og:description" content="Merge lines with separators or split text by separators. Multiple separator options. Shows line count before/after. Free, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/list-tools/merge-split-lines.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Merge/Split Lines",
+        "description": "Merge lines with separators or split text by separators. Multiple separator options. Shows line count before/after. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/list-tools/merge-split-lines.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "List Tools", "item": "https://fixyourtext.com/tools/list-tools/"},
+                {"@type": "ListItem", "position": 4, "name": "Merge/Split Lines", "item": "https://fixyourtext.com/tools/list-tools/merge-split-lines.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Merge/Split Lines – CSV to Text Converter | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+    
+    <style>
+        .tab-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            border: 2px solid var(--primary);
+            background-color: var(--bg-white);
+            color: var(--primary);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .tab-button.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        .tab-button:hover {
+            background-color: var(--primary-light);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .separator-select {
+            width: 100%;
+            padding: var(--spacing-md);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: var(--font-size-base);
+            margin-bottom: var(--spacing-md);
+        }
+        .custom-separator-input {
+            width: 100%;
+            padding: var(--spacing-md);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: var(--font-size-base);
+            margin-top: var(--spacing-sm);
+            display: none;
+        }
+        .custom-separator-input.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/list-tools/">List Tools</a>
+                <span>/</span>
+                <span>Merge/Split Lines</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Merge or Split Text Lines</h1>
+
+            <p class="tool-description">Merge multiple lines into one with separators, or split text by separators into multiple lines. Multiple separator options available.</p>
+
+            <div class="tool-intro">
+                <p>
+                This free merge/split tool converts between different text formats instantly. It is useful for developers, data analysts, and anyone preparing data for import or export to different systems. The tool can merge multiple lines with separators or split CSV data into individual lines with custom delimiters. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Paste your text here:</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter or paste your text here..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Mode:</h2>
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="merge">Merge</button>
+                        <button class="tab-button" data-tab="split">Split</button>
+                    </div>
+
+                    <!-- Merge Tab -->
+                    <div class="tab-content active" id="mergeTab">
+                        <div class="form-group">
+                            <label for="mergeSeparator">Separator:</label>
+                            <select id="mergeSeparator" class="separator-select">
+                                <option value="space">Space</option>
+                                <option value="comma">Comma</option>
+                                <option value="semicolon">Semicolon</option>
+                                <option value="pipe">Pipe (|)</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                            <input type="text" id="mergeCustomSeparator" class="custom-separator-input" placeholder="Enter custom separator...">
+                        </div>
+                        <div class="button-group">
+                            <button id="mergeBtn" class="btn-primary">Merge Lines</button>
+                        </div>
+                    </div>
+
+                    <!-- Split Tab -->
+                    <div class="tab-content" id="splitTab">
+                        <div class="form-group">
+                            <label for="splitSeparator">Separator:</label>
+                            <select id="splitSeparator" class="separator-select">
+                                <option value="space">Space</option>
+                                <option value="comma">Comma</option>
+                                <option value="semicolon">Semicolon</option>
+                                <option value="pipe">Pipe (|)</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                            <input type="text" id="splitCustomSeparator" class="custom-separator-input" placeholder="Enter custom separator...">
+                        </div>
+                        <div class="button-group">
+                            <button id="splitBtn" class="btn-primary">Split Text</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Result:</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="Result will appear here..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Paste or type your text in the input area</li>
+                    <li>Choose "Merge" to join lines together or "Split" to separate text into lines</li>
+                    <li>Select a separator (space, comma, semicolon, pipe, or custom)</li>
+                    <li>If using custom separator, enter it in the text field</li>
+                    <li>Click the action button to process your text</li>
+                    <li>See the result and line count information</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>Modes Explained:</h2>
+                <ul>
+                    <li><strong>Merge:</strong> Takes multiple lines and joins them with the selected separator</li>
+                    <li><strong>Split:</strong> Takes text and splits it by the selected separator into multiple lines</li>
+                </ul>
+
+                <h2>Separators:</h2>
+                <ul>
+                    <li><strong>Space:</strong> Uses a single space as separator</li>
+                    <li><strong>Comma:</strong> Uses a comma followed by space (", ")</li>
+                    <li><strong>Semicolon:</strong> Uses a semicolon followed by space ("; ")</li>
+                    <li><strong>Pipe:</strong> Uses a pipe character ("|")</li>
+                    <li><strong>Custom:</strong> Enter any custom separator you want to use</li>
+                </ul>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Process (merge or split)</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/list-tools/alphabetize-list.html">Alphabetize List</a></li>
+                    <li><a href="/tools/list-tools/sort-lines.html">Sort Lines</a></li>
+                    <li><a href="/tools/list-tools/reverse-list.html">Reverse List</a></li>
+                    <li><a href="/tools/list-tools/randomize-lines.html">Randomize Lines</a></li>
+                </ul>
+
+                <h2>Why Use the Merge/Split Lines Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your data stays private</li>
+                    <li>Convert between CSV and line-separated formats</li>
+                    <li>Custom separator options for flexibility</li>
+                    <li>Handles data transformation instantly</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-list-tools.js"></script>
+</body>
+</html>
+

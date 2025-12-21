@@ -1,0 +1,25 @@
+{
+    "name": "fixyourtext",
+    "short_name": "fixyourtext",
+    "description": "Free online text tools for formatting, cleaning, converting, analyzing, and generating text — no login, no data collection, optimized for speed.",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "theme_color": "#0ea5e9",
+    "background_color": "#ffffff",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/images/icon-192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/images/icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      }
+    ]
+  }

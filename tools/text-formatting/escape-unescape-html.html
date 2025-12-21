@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free HTML escape/unescape tool to convert HTML entities. No signup, no tracking. Works instantly.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/text-formatting/escape-unescape-html.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Escape/Unescape HTML Entities — Convert HTML Entities | FixYourText">
+    <meta property="og:description" content="Escape text to HTML entities or unescape entities to text. Fast, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/text-formatting/escape-unescape-html.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Escape/Unescape HTML Entities",
+        "description": "Escape text to HTML entities or unescape entities back to text. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/text-formatting/escape-unescape-html.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "Text Formatting", "item": "https://fixyourtext.com/tools/text-formatting/"},
+                {"@type": "ListItem", "position": 4, "name": "Escape/Unescape HTML Entities", "item": "https://fixyourtext.com/tools/text-formatting/escape-unescape-html.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Escape/Unescape HTML – HTML Entity Converter | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/text-formatting/">Text Formatting</a>
+                <span>/</span>
+                <span>Escape/Unescape HTML Entities</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Escape/Unescape HTML Entities</h1>
+
+            <p class="tool-description">Convert between plain text and HTML entities, or vice versa. Useful for web developers and content creators.</p>
+
+            <div class="tool-intro">
+                <p>
+                This free HTML escape/unescape tool converts HTML entities and special characters instantly. It is useful for developers, content creators, and anyone working with HTML code or displaying code in documents. The tool handles comprehensive character encoding to prevent HTML injection and display code safely. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Paste your text here:</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter or paste your text or HTML entities here..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Convert:</h2>
+                    <div class="button-group">
+                        <button id="escapeBtn" class="btn-primary" data-action="escape">
+                            Escape to Entities
+                        </button>
+                        <button id="unescapeBtn" class="btn-primary" data-action="unescape">
+                            Unescape to Text
+                        </button>
+                    </div>
+
+                    <h2 style="margin-top: var(--spacing-lg);">Options:</h2>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="escapeAllCheckbox">
+                            <span>Escape All Special Chars</span>
+                        </label>
+                        <p class="checkbox-help">Escapes quotes, apostrophes, and other characters (comprehensive)</p>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Result:</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="Converted text will appear here..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Paste or type your text or HTML entities in the input area</li>
+                    <li>Click "Escape to Entities" to convert text to HTML entities</li>
+                    <li>Or click "Unescape to Text" to convert entities back to text</li>
+                    <li>See the result instantly</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>Common HTML Entities:</h2>
+                <ul>
+                    <li><strong>&amp;amp;</strong> = &amp; (ampersand)</li>
+                    <li><strong>&amp;lt;</strong> = &lt; (less than)</li>
+                    <li><strong>&amp;gt;</strong> = &gt; (greater than)</li>
+                    <li><strong>&amp;quot;</strong> = " (double quote)</li>
+                    <li><strong>&amp;apos;</strong> = ' (apostrophe)</li>
+                    <li><strong>&amp;nbsp;</strong> = non-breaking space</li>
+                    <li><strong>&amp;copy;</strong> = © (copyright)</li>
+                    <li><strong>&amp;reg;</strong> = ® (registered)</li>
+                    <li><strong>&amp;trade;</strong> = ™ (trademark)</li>
+                </ul>
+
+                <h2>Escape All Special Chars Option:</h2>
+                <p>When enabled, escapes additional characters including quotes and apostrophes for maximum HTML safety.</p>
+
+                <h2>Example:</h2>
+                <p><strong>Input:</strong> "Hello & Welcome! <tag>"</p>
+                <p><strong>Escape Output:</strong> "Hello &amp; Welcome! &lt;tag&gt;"</p>
+                <p><strong>Unescape Input:</strong> "Hello &amp; Welcome! &lt;tag&gt;"</p>
+                <p><strong>Unescape Output:</strong> "Hello & Welcome! <tag>"</p>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Escape to entities</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Use Cases:</h2>
+                <ul>
+                    <li><strong>Web Developers:</strong> Prepare text for safe HTML display</li>
+                    <li><strong>Content Creators:</strong> Format text for blogs or websites</li>
+                    <li><strong>Debugging:</strong> Understand how text is being encoded</li>
+                    <li><strong>Data Migration:</strong> Convert between formats</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/text-formatting/strip-html.html">Strip HTML Tags</a></li>
+                    <li><a href="/tools/text-formatting/remove-punctuation.html">Remove Punctuation</a></li>
+                    <li><a href="/tools/text-formatting/trim-whitespace.html">Trim Whitespace</a></li>
+                </ul>
+
+                <h2>Why Use the Escape/Unescape HTML Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your code stays private</li>
+                    <li>Comprehensive HTML entity handling</li>
+                    <li>Prevent HTML injection and encoding issues</li>
+                    <li>Works with any HTML code or entities</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-text-formatting.js"></script>
+</body>
+</html>

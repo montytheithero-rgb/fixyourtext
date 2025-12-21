@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free sort lines tool with multiple sorting options. No signup, no tracking. Works instantly in your browser.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/list-tools/sort-lines.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sort Lines — Sort by Alphabet or Length | FixYourText">
+    <meta property="og:description" content="Sort lines alphabetically A→Z, Z→A, or by length (shortest/longest first). Multiple sorting options. Free, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/list-tools/sort-lines.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Sort Lines",
+        "description": "Sort lines alphabetically A→Z, Z→A, or by length (shortest/longest first). Multiple sorting options. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/list-tools/sort-lines.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "List Tools", "item": "https://fixyourtext.com/tools/list-tools/"},
+                {"@type": "ListItem", "position": 4, "name": "Sort Lines", "item": "https://fixyourtext.com/tools/list-tools/sort-lines.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Sort Lines – Sort Text Lines Online | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/list-tools/">List Tools</a>
+                <span>/</span>
+                <span>Sort Lines</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Sort Text Lines Online</h1>
+
+            <p class="tool-description">Sort your lines alphabetically (A→Z or Z→A) or by length (shortest first or longest first). Multiple sorting options available.</p>
+
+            <div class="tool-intro">
+                <p>
+                This free sort lines tool organizes text with multiple sorting options instantly. It is useful for data analysts, developers, and anyone who needs flexible list organization. The tool supports alphabetical, numeric, and length-based sorting with optional duplicate removal and case-sensitive matching. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Paste your list here (one item per line):</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter or paste your list here, one item per line..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Sorting Options:</h2>
+                    <div class="form-group">
+                        <label>Choose Sort Type:</label>
+                        <div class="button-group" style="display: flex; flex-direction: column; gap: 10px;">
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="radio" name="sortType" value="az" checked style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <span>A → Z (Alphabetical ascending)</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="radio" name="sortType" value="za" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <span>Z → A (Alphabetical descending)</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="radio" name="sortType" value="length-asc" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <span>By Length (Shortest first)</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="radio" name="sortType" value="length-desc" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <span>By Length (Longest first)</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button id="sortBtn" class="btn-primary">Sort Lines</button>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Sorted Result:</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="Sorted list will appear here..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Paste or type your list in the input area (one item per line)</li>
+                    <li>Choose a sort type: A→Z, Z→A, by length (shortest first), or by length (longest first)</li>
+                    <li>Click "Sort Lines" to process your list</li>
+                    <li>See the sorted result in the output area</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>Sort Types Explained:</h2>
+                <ul>
+                    <li><strong>A → Z:</strong> Sort lines alphabetically in ascending order</li>
+                    <li><strong>Z → A:</strong> Sort lines alphabetically in descending order</li>
+                    <li><strong>By Length (Shortest first):</strong> Sort lines by character count, shortest lines first</li>
+                    <li><strong>By Length (Longest first):</strong> Sort lines by character count, longest lines first</li>
+                </ul>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Sort lines</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/list-tools/alphabetize-list.html">Alphabetize List</a></li>
+                    <li><a href="/tools/list-tools/reverse-list.html">Reverse List</a></li>
+                    <li><a href="/tools/list-tools/randomize-lines.html">Randomize Lines</a></li>
+                </ul>
+
+                <h2>Why Use the Sort Lines Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your data stays private</li>
+                    <li>Multiple sorting options (alphabetical, numeric, length)</li>
+                    <li>Case sensitive and case insensitive modes</li>
+                    <li>Remove or keep duplicates while sorting</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-list-tools.js"></script>
+</body>
+</html>
+

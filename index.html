@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online text and list tools. Alphabetize, remove duplicates, case convert, extract emails, and more. No signup, no tracking, 100% free.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="FixYourText — Free Text Tools & Utilities">
+    <meta property="og:description" content="Convert text case, remove extra spaces, strip HTML tags, escape HTML entities, and 8+ more text formatting tools. Fast, free, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FixYourText",
+        "url": "https://fixyourtext.com/",
+        "logo": "https://fixyourtext.com/logo.png",
+        "description": "Free online text tools and utilities",
+        "sameAs": [
+            "https://twitter.com/fixyourtext",
+            "https://facebook.com/fixyourtext"
+        ]
+    }
+    </script>
+    
+    <title>FixYourText – Free Online Text & List Tools</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #0ea5e9;
+            padding: 12px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background-color: #f0f9ff;
+            color: #0ea5e9;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .feature-box {
+            background: #f0f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #0ea5e9;
+        }
+
+        .feature-box h3 {
+            color: #0ea5e9;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            color: #475569;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .tools-section {
+            margin-bottom: 60px;
+        }
+
+        .tools-section h2 {
+            color: #1e293b;
+            margin-bottom: 30px;
+            font-size: 1.875rem;
+            border-bottom: 2px solid #0ea5e9;
+            padding-bottom: 15px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .tool-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .tool-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+            border-color: #0ea5e9;
+        }
+
+        .tool-card h3 {
+            color: #0ea5e9;
+            margin: 0 0 10px 0;
+            font-size: 1.125rem;
+        }
+
+        .tool-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin: 0 0 15px 0;
+            line-height: 1.5;
+        }
+
+        .tool-card a {
+            display: inline-block;
+            color: #0ea5e9;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .tool-card a:hover {
+            border-bottom-color: #0ea5e9;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: #10b981;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .status-badge.coming {
+            background-color: #f59e0b;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 0 15px;
+            }
+
+            .hero h1 {
+                font-size: 1.875rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .tools-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Fix Your Text, Instantly</h1>
+            <p>Free online text tools to convert case, remove extra spaces, strip HTML, escape entities, and more. No signup, no tracking, no data collection.</p>
+            <a href="#tools" class="cta-button">Explore All Tools</a>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature-box">
+                <h3>⚡ Fast & Free</h3>
+                <p>All tools run instantly in your browser with no server uploads or tracking.</p>
+            </div>
+            <div class="feature-box">
+                <h3>🔒 100% Private</h3>
+                <p>Your text never leaves your device. No data collection, no analytics, no cookies.</p>
+            </div>
+            <div class="feature-box">
+                <h3>🛠 Powerful Tools</h3>
+                <p>21+ text formatting and list management tools with advanced options and customization.</p>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section class="tools-section" id="tools">
+            <h2>Text Formatting Tools</h2>
+            <div class="tools-grid">
+                <!-- Case Converter -->
+                <div class="tool-card">
+                    <h3>🔤 Case Converter</h3>
+                    <p>Convert text to UPPERCASE, lowercase, Title Case, Sentence case, or tOGGLE cASE.</p>
+                    <a href="/tools/text-formatting/case-converter.html">Use Tool →</a>
+                </div>
+
+                <!-- Remove Extra Spaces -->
+                <div class="tool-card">
+                    <h3>📏 Remove Extra Spaces</h3>
+                    <p>Trim spaces, collapse multiple spaces into one, or remove all spaces completely.</p>
+                    <a href="/tools/text-formatting/remove-extra-spaces.html">Use Tool →</a>
+                </div>
+
+                <!-- Remove Line Breaks -->
+                <div class="tool-card">
+                    <h3>↔ Remove Line Breaks</h3>
+                    <p>Join lines with space, comma, semicolon, or nothing. Preserve paragraph breaks option.</p>
+                    <a href="/tools/text-formatting/remove-line-breaks.html">Use Tool →</a>
+                </div>
+
+                <!-- Text Repeater -->
+                <div class="tool-card">
+                    <h3>🔁 Text Repeater</h3>
+                    <p>Repeat any text multiple times with custom separators between repetitions.</p>
+                    <a href="/tools/text-formatting/text-repeater.html">Use Tool →</a>
+                </div>
+
+                <!-- Trim Whitespace -->
+                <div class="tool-card">
+                    <h3>✂ Trim Whitespace</h3>
+                    <p>Remove leading and trailing whitespace. Optionally collapse internal spaces.</p>
+                    <a href="/tools/text-formatting/trim-whitespace.html">Use Tool →</a>
+                </div>
+
+                <!-- Remove Emojis -->
+                <div class="tool-card">
+                    <h3>😀 Remove Emojis</h3>
+                    <p>Remove all emojis from text or replace them with [emoji] placeholders.</p>
+                    <a href="/tools/text-formatting/remove-emojis.html">Use Tool →</a>
+                </div>
+
+                <!-- Reverse Text -->
+                <div class="tool-card">
+                    <h3>🔄 Reverse Text</h3>
+                    <p>Reverse characters, reverse word order, or reverse line order.</p>
+                    <a href="/tools/text-formatting/reverse-text.html">Use Tool →</a>
+                </div>
+
+                <!-- Remove Punctuation -->
+                <div class="tool-card">
+                    <h3>❌ Remove Punctuation</h3>
+                    <p>Remove all or basic punctuation with options to keep specific marks.</p>
+                    <a href="/tools/text-formatting/remove-punctuation.html">Use Tool →</a>
+                </div>
+
+                <!-- Remove Numbers -->
+                <div class="tool-card">
+                    <h3>🔢 Remove Numbers</h3>
+                    <p>Remove digits only or entire numbers. Optionally remove number words.</p>
+                    <a href="/tools/text-formatting/remove-numbers.html">Use Tool →</a>
+                </div>
+
+                <!-- Strip HTML Tags -->
+                <div class="tool-card">
+                    <h3>&lt;&gt; Strip HTML Tags</h3>
+                    <p>Remove HTML tags, decode entities, preserve line breaks, and clean up spacing.</p>
+                    <a href="/tools/text-formatting/strip-html.html">Use Tool →</a>
+                </div>
+
+                <!-- Escape/Unescape HTML Entities -->
+                <div class="tool-card">
+                    <h3>&amp; Escape/Unescape HTML</h3>
+                    <p>Convert text to HTML entities or unescape entities back to plain text.</p>
+                    <a href="/tools/text-formatting/escape-unescape-html.html">Use Tool →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- List Tools Section -->
+        <section class="tools-section">
+            <h2>List Tools</h2>
+            <div class="tools-grid">
+                <!-- Alphabetize List -->
+                <div class="tool-card">
+                    <h3>🔤 Alphabetize List</h3>
+                    <p>Sort lines alphabetically A→Z or Z→A, with case sensitive/insensitive options and duplicate handling.</p>
+                    <a href="/tools/list-tools/alphabetize-list.html">Use Tool →</a>
+                </div>
+
+                <!-- Remove Duplicate Lines -->
+                <div class="tool-card">
+                    <h3>🔄 Remove Duplicate Lines</h3>
+                    <p>Remove exact duplicate lines from your list. Case sensitive toggle and count of duplicates removed.</p>
+                    <a href="/tools/list-tools/remove-duplicate-lines.html">Use Tool →</a>
+                </div>
+
+                <!-- Sort Lines -->
+                <div class="tool-card">
+                    <h3>📊 Sort Lines</h3>
+                    <p>Sort lines alphabetically, by length (shortest/longest first). Multiple sorting options available.</p>
+                    <a href="/tools/list-tools/sort-lines.html">Use Tool →</a>
+                </div>
+
+                <!-- Reverse List -->
+                <div class="tool-card">
+                    <h3>↩ Reverse List</h3>
+                    <p>Reverse the order of lines in your list. Simple one-button operation to flip line order.</p>
+                    <a href="/tools/list-tools/reverse-list.html">Use Tool →</a>
+                </div>
+
+                <!-- Randomize Lines -->
+                <div class="tool-card">
+                    <h3>🎲 Randomize Lines</h3>
+                    <p>Randomly shuffle the order of lines in your list. Different result each time you click.</p>
+                    <a href="/tools/list-tools/randomize-lines.html">Use Tool →</a>
+                </div>
+
+                <!-- Clean Empty Lines -->
+                <div class="tool-card">
+                    <h3>🧹 Clean Empty Lines</h3>
+                    <p>Remove completely blank lines and lines with only whitespace. Option to trim each line.</p>
+                    <a href="/tools/list-tools/clean-empty-lines.html">Use Tool →</a>
+                </div>
+
+                <!-- Filter Lines by Keyword -->
+                <div class="tool-card">
+                    <h3>🔍 Filter Lines by Keyword</h3>
+                    <p>Show or hide lines matching a keyword. Case sensitive toggle and count of matching lines.</p>
+                    <a href="/tools/list-tools/filter-lines-by-keyword.html">Use Tool →</a>
+                </div>
+
+                <!-- Extract Emails -->
+                <div class="tool-card">
+                    <h3>📧 Extract Emails</h3>
+                    <p>Scan text and extract all email addresses. Remove duplicates option and count of emails found.</p>
+                    <a href="/tools/list-tools/extract-emails.html">Use Tool →</a>
+                </div>
+
+                <!-- Extract URLs -->
+                <div class="tool-card">
+                    <h3>🔗 Extract URLs</h3>
+                    <p>Scan text and extract all URLs (http, https, ftp, www). Remove duplicates option and count display.</p>
+                    <a href="/tools/list-tools/extract-urls.html">Use Tool →</a>
+                </div>
+
+                <!-- Merge/Split Lines -->
+                <div class="tool-card">
+                    <h3>🔀 Merge/Split Lines</h3>
+                    <p>Merge lines with separators or split text by separators. Multiple separator options available.</p>
+                    <a href="/tools/list-tools/merge-split-lines.html">Use Tool →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coming Soon Section -->
+        <section class="tools-section">
+            <h2>Coming Soon</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>🔐 Encoding/Decoding</h3>
+                    <p>Base64, URL encode, MD5 hash, SHA-256 hash, and more.</p>
+                    <span class="status-badge coming">Coming Soon</span>
+                </div>
+                <div class="tool-card">
+                    <h3>⚙ Generators</h3>
+                    <p>UUID generator, random password, random color, QR code.</p>
+                    <span class="status-badge coming">Coming Soon</span>
+                </div>
+                <div class="tool-card">
+                    <h3>📊 Analysis</h3>
+                    <p>Word count, character count, readability, letter frequency.</p>
+                    <span class="status-badge coming">Coming Soon</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section style="margin-bottom: 60px;">
+            <h2 style="color: #1e293b; margin-bottom: 30px; font-size: 1.875rem; border-bottom: 2px solid #0ea5e9; padding-bottom: 15px;">Frequently Asked Questions</h2>
+            
+            <div style="max-width: 800px;">
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #1e293b; margin-bottom: 10px;">Is my data safe?</h3>
+                    <p style="color: #64748b; margin: 0;">Yes! All tools run 100% client-side in your browser. Your data never leaves your device. We don't collect, store, or track anything.</p>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #1e293b; margin-bottom: 10px;">Do I need to create an account?</h3>
+                    <p style="color: #64748b; margin: 0;">No! All tools are completely free and don't require any signup, login, or account creation.</p>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #1e293b; margin-bottom: 10px;">Can I use these tools offline?</h3>
+                    <p style="color: #64748b; margin: 0;">Yes! Once the page loads, you can use all tools offline since they run entirely in your browser.</p>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #1e293b; margin-bottom: 10px;">Is there a file size limit?</h3>
+                    <p style="color: #64748b; margin: 0;">No hard limit, but very large texts (>1MB) may slow down your browser. For best performance, we recommend texts under 500KB.</p>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #1e293b; margin-bottom: 10px;">What browsers are supported?</h3>
+                    <p style="color: #64748b; margin: 0;">All modern browsers (Chrome, Firefox, Safari, Edge). We don't support Internet Explorer.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <!-- Scripts -->
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

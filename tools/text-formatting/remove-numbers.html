@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free number remover to strip digits from text. No signup, no tracking. Works instantly in browser.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/text-formatting/remove-numbers.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Remove Numbers — Remove Digits from Text | FixYourText">
+    <meta property="og:description" content="Remove numbers, digits, and number words from text. Fast, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/text-formatting/remove-numbers.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Remove Numbers",
+        "description": "Remove numbers and digits from text. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/text-formatting/remove-numbers.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "Text Formatting", "item": "https://fixyourtext.com/tools/text-formatting/"},
+                {"@type": "ListItem", "position": 4, "name": "Remove Numbers", "item": "https://fixyourtext.com/tools/text-formatting/remove-numbers.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Remove Numbers – Number Stripper Tool | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/text-formatting/">Text Formatting</a>
+                <span>/</span>
+                <span>Remove Numbers</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Remove Numbers from Text</h1>
+
+            <p class="tool-description">Remove all numbers and digits from your text, with options to remove number words as well.</p>
+
+            <div class="tool-intro">
+                <p>
+                This free number remover tool strips all digits from text instantly. It is useful for data analysts, researchers, and anyone extracting text content while removing numeric data. The tool removes individual digits or complete numbers while preserving all text content and formatting. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Paste your text here:</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter or paste your text here..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Remove Options:</h2>
+                    <div class="button-group">
+                        <button id="removeDigitsBtn" class="btn-primary" data-action="digits">
+                            Remove Digits Only
+                        </button>
+                        <button id="removeAllBtn" class="btn-primary" data-action="all">
+                            Remove All Numbers
+                        </button>
+                    </div>
+
+                    <h2 style="margin-top: var(--spacing-lg);">Options:</h2>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="removeNumberWordsCheckbox">
+                            <span>Remove Number Words (English)</span>
+                        </label>
+                        <p class="checkbox-help">Removes words like "one", "two", "three", etc. (English only, experimental)</p>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="trimSpacesCheckbox" checked>
+                            <span>Trim Extra Spaces</span>
+                        </label>
+                        <p class="checkbox-help">Remove extra spaces created by number removal</p>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Result:</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="Text without numbers will appear here..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Paste or type your text in the input area</li>
+                    <li>Choose "Remove Digits Only" or "Remove All Numbers"</li>
+                    <li>Optionally remove number words (experimental, English only)</li>
+                    <li>See the result instantly</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>Removal Modes Explained:</h2>
+                <ul>
+                    <li><strong>Remove Digits Only:</strong> Removes only numeric digits (0-9)</li>
+                    <li><strong>Remove All Numbers:</strong> Removes digits and common number patterns</li>
+                </ul>
+
+                <h2>Optional Features:</h2>
+                <ul>
+                    <li><strong>Remove Number Words:</strong> Removes English number words (one, two, three, etc.). This is experimental and only works for English text.</li>
+                    <li><strong>Trim Extra Spaces:</strong> Cleans up extra spaces left after number removal</li>
+                </ul>
+
+                <h2>Example:</h2>
+                <p><strong>Input:</strong> "I have 3 apples and 5 oranges. My address is 123 Main St."</p>
+                <p><strong>Output (Remove Digits):</strong> "I have apples and oranges. My address is Main St."</p>
+                <p><strong>Output (Remove All):</strong> "I have apples and oranges. My address is Main St."</p>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Remove digits only</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/text-formatting/remove-punctuation.html">Remove Punctuation</a></li>
+                    <li><a href="/tools/text-formatting/remove-emojis.html">Remove Emojis</a></li>
+                    <li><a href="/tools/list-tools/extract-emails.html">Extract Emails</a></li>
+                </ul>
+
+                <h2>Why Use the Remove Numbers Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your text stays private</li>
+                    <li>Removes all individual digits instantly</li>
+                    <li>Preserves text content and formatting</li>
+                    <li>Works for data cleaning and text extraction</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-text-formatting.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free line break remover to join text lines. No signup, no tracking. Works instantly in your browser.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/text-formatting/remove-line-breaks.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Remove Line Breaks — Join Lines Easily | FixYourText">
+    <meta property="og:description" content="Remove line breaks, join lines with custom separators (space, comma, semicolon). Free, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/text-formatting/remove-line-breaks.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Remove Line Breaks",
+        "description": "Remove line breaks, join lines with custom separators. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/text-formatting/remove-line-breaks.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "Text Formatting", "item": "https://fixyourtext.com/tools/text-formatting/"},
+                {"@type": "ListItem", "position": 4, "name": "Remove Line Breaks", "item": "https://fixyourtext.com/tools/text-formatting/remove-line-breaks.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Remove Line Breaks – Join Text Lines | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/text-formatting/">Text Formatting</a>
+                <span>/</span>
+                <span>Remove Line Breaks</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Remove Line Breaks and Join Text</h1>
+
+            <p class="tool-description">Join multiple lines into a single line or separate them with your choice of separator (space, comma, semicolon, etc.).</p>
+
+            <div class="tool-intro">
+                <p>
+                This free line break remover tool joins text lines into a single paragraph instantly. It is useful for writers, developers, and anyone reformatting text from PDFs or copy-pasted content. The tool removes all newline characters to create continuous text while preserving word content and formatting. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Paste your text here:</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter or paste your text here..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Choose Separator:</h2>
+                    <div class="button-group">
+                        <button id="spaceBtn" class="btn-primary" data-separator="space">
+                            Join with Space
+                        </button>
+                        <button id="commaBtn" class="btn-primary" data-separator="comma">
+                            Join with Comma
+                        </button>
+                        <button id="semicolonBtn" class="btn-primary" data-separator="semicolon">
+                            Join with Semicolon
+                        </button>
+                        <button id="noneBtn" class="btn-primary" data-separator="none">
+                            Join (No Separator)
+                        </button>
+                    </div>
+
+                    <h2 style="margin-top: var(--spacing-lg);">Options:</h2>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="preserveParagraphsCheckbox">
+                            <span>Preserve Paragraph Breaks</span>
+                        </label>
+                        <p class="checkbox-help">When checked, double line breaks become paragraph separators</p>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Result:</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="Result will appear here..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Paste or type your multi-line text in the input area</li>
+                    <li>Choose how you want lines to be joined</li>
+                    <li>Optionally check "Preserve Paragraph Breaks" to keep double line breaks</li>
+                    <li>See the result instantly</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>Separator Options Explained:</h2>
+                <ul>
+                    <li><strong>Join with Space:</strong> Lines separated by a single space</li>
+                    <li><strong>Join with Comma:</strong> Lines separated by a comma and space (`, `)</li>
+                    <li><strong>Join with Semicolon:</strong> Lines separated by a semicolon and space (`; `)</li>
+                    <li><strong>Join (No Separator):</strong> Lines joined directly together with no separator</li>
+                </ul>
+
+                <h2>Example:</h2>
+                <p><strong>Input:</strong></p>
+                <pre>hello
+world
+test</pre>
+                <p><strong>Output (Join with Space):</strong></p>
+                <pre>hello world test</pre>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Join with space</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/text-formatting/trim-whitespace.html">Trim Whitespace</a></li>
+                    <li><a href="/tools/text-formatting/remove-extra-spaces.html">Remove Extra Spaces</a></li>
+                    <li><a href="/tools/list-tools/clean-empty-lines.html">Clean Empty Lines</a></li>
+                </ul>
+
+                <h2>Why Use the Remove Line Breaks Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your text stays private</li>
+                    <li>Joins paragraphs into continuous text</li>
+                    <li>Removes all newline characters instantly</li>
+                    <li>Perfect for reformatting PDF text</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-text-formatting.js"></script>
+</body>
+</html>

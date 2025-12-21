@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free case converter to change text case (UPPERCASE, lowercase, Title Case). No signup, no tracking.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/text-formatting/case-converter.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Case Converter — Convert Text Cases | FixYourText">
+    <meta property="og:description" content="Convert text to uppercase, lowercase, title case, sentence case. Free, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/text-formatting/case-converter.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Case Converter",
+        "description": "Convert text to uppercase, lowercase, title case, sentence case. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/text-formatting/case-converter.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "Text Formatting", "item": "https://fixyourtext.com/tools/text-formatting/"},
+                {"@type": "ListItem", "position": 4, "name": "Case Converter", "item": "https://fixyourtext.com/tools/text-formatting/case-converter.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Case Converter – Change Text Case Online | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/text-formatting/">Text Formatting</a>
+                <span>/</span>
+                <span>Case Converter</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Case Converter Tool</h1>
+
+            <p class="tool-description">Convert your text to different cases: UPPERCASE, lowercase, Title Case, Sentence case, or toggle between them.</p>
+
+            <div class="tool-intro">
+                <p>
+                This free case converter tool instantly changes text between different letter cases. It is useful for writers, developers, and social media creators needing to standardize capitalization for titles and content. The tool supports UPPERCASE, lowercase, Title Case, Sentence case, and inverse case options for complete formatting control. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Paste your text here:</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter or paste your text here..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Choose Case Type:</h2>
+                    <div class="button-group">
+                        <button id="uppercaseBtn" class="btn-primary" data-case="uppercase">
+                            UPPERCASE
+                        </button>
+                        <button id="lowercaseBtn" class="btn-primary" data-case="lowercase">
+                            lowercase
+                        </button>
+                        <button id="titlecaseBtn" class="btn-primary" data-case="titlecase">
+                            Title Case
+                        </button>
+                        <button id="sentencecaseBtn" class="btn-primary" data-case="sentencecase">
+                            Sentence case
+                        </button>
+                        <button id="togglecaseBtn" class="btn-primary" data-case="togglecase">
+                            tOGGLE cASE
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Result:</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="Converted text will appear here..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Paste or type your text in the input area</li>
+                    <li>Click the case type you want to convert to</li>
+                    <li>See the result instantly</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>Case Types Explained:</h2>
+                <ul>
+                    <li><strong>UPPERCASE:</strong> ALL LETTERS IN CAPITAL</li>
+                    <li><strong>lowercase:</strong> all letters in lowercase</li>
+                    <li><strong>Title Case:</strong> Every Word Starts With Capital Letter</li>
+                    <li><strong>Sentence case:</strong> Only first letter and proper nouns are capitalized</li>
+                    <li><strong>Toggle Case:</strong> Swaps uppercase with lowercase (A→a, a→A)</li>
+                </ul>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Convert to UPPERCASE</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/text-formatting/remove-extra-spaces.html">Remove Extra Spaces</a></li>
+                    <li><a href="/tools/text-formatting/trim-whitespace.html">Trim Whitespace</a></li>
+                    <li><a href="/tools/text-formatting/remove-punctuation.html">Remove Punctuation</a></li>
+                </ul>
+
+                <h2>Why Use the Case Converter Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your text stays private</li>
+                    <li>6+ case conversion options available</li>
+                    <li>Handles any text length instantly</li>
+                    <li>Keyboard shortcuts for faster workflow</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-text-formatting.js"></script>
+</body>
+</html>

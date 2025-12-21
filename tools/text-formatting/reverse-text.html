@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free text reversal tool to reverse text backwards. No signup, no tracking. Works instantly in browser.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/text-formatting/reverse-text.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Reverse Text — Reverse Text, Words, or Lines | FixYourText">
+    <meta property="og:description" content="Reverse text characters, word order, or line order. Fast, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/text-formatting/reverse-text.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Reverse Text",
+        "description": "Reverse text characters, words, or lines. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/text-formatting/reverse-text.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "Text Formatting", "item": "https://fixyourtext.com/tools/text-formatting/"},
+                {"@type": "ListItem", "position": 4, "name": "Reverse Text", "item": "https://fixyourtext.com/tools/text-formatting/reverse-text.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Reverse Text – Text Reversal Tool | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/text-formatting/">Text Formatting</a>
+                <span>/</span>
+                <span>Reverse Text</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Reverse Text Online</h1>
+
+            <p class="tool-description">Reverse your text in multiple ways: reverse characters, reverse word order, or reverse line order.</p>
+
+            <div class="tool-intro">
+                <p>
+                This free text reversal tool reverses text character by character instantly. It is useful for puzzle creators, developers, and anyone who needs to reverse text for fun or encoding. The tool preserves all characters including spaces and punctuation while reversing the complete text order. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Paste your text here:</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter or paste your text here..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Choose Reverse Type:</h2>
+                    <div class="button-group">
+                        <button id="reverseCharsBtn" class="btn-primary" data-type="chars">
+                            Reverse Characters
+                        </button>
+                        <button id="reverseWordsBtn" class="btn-primary" data-type="words">
+                            Reverse Words
+                        </button>
+                        <button id="reverseLinesBtn" class="btn-primary" data-type="lines">
+                            Reverse Lines
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Result:</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="Reversed text will appear here..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Paste or type your text in the input area</li>
+                    <li>Choose how you want to reverse the text</li>
+                    <li>See the result instantly</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>Reverse Types Explained:</h2>
+                <ul>
+                    <li><strong>Reverse Characters:</strong> Flips the entire text character by character</li>
+                    <li><strong>Reverse Words:</strong> Reverses the order of words while keeping characters in place</li>
+                    <li><strong>Reverse Lines:</strong> Reverses the order of lines (bottom to top)</li>
+                </ul>
+
+                <h2>Examples:</h2>
+                <p><strong>Input:</strong> "hello world"</p>
+                <ul>
+                    <li><strong>Reverse Characters:</strong> "dlrow olleh"</li>
+                    <li><strong>Reverse Words:</strong> "world hello"</li>
+                </ul>
+
+                <p><strong>Input (Multi-line):</strong></p>
+                <pre>line one
+line two
+line three</pre>
+                <p><strong>Reverse Lines:</strong></p>
+                <pre>line three
+line two
+line one</pre>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Reverse characters</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/text-formatting/text-repeater.html">Text Repeater</a></li>
+                    <li><a href="/tools/list-tools/reverse-list.html">Reverse List</a></li>
+                    <li><a href="/tools/list-tools/randomize-lines.html">Randomize Lines</a></li>
+                </ul>
+
+                <h2>Why Use the Reverse Text Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your text stays private</li>
+                    <li>Reverses all characters including spaces and punctuation</li>
+                    <li>Works with any text length instantly</li>
+                    <li>Perfect for text encoding and fun projects</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-text-formatting.js"></script>
+</body>
+</html>

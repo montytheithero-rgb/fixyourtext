@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free filter tool to search and find lines by keyword. No signup, no tracking. Works instantly in your browser.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/list-tools/filter-lines-by-keyword.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Filter Lines by Keyword — Show/Hide Matching Lines | FixYourText">
+    <meta property="og:description" content="Show or hide lines matching a keyword. Case sensitive toggle and count of matching lines. Free, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/list-tools/filter-lines-by-keyword.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Filter Lines by Keyword",
+        "description": "Show or hide lines matching a keyword. Case sensitive toggle and count of matching lines. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/list-tools/filter-lines-by-keyword.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "List Tools", "item": "https://fixyourtext.com/tools/list-tools/"},
+                {"@type": "ListItem", "position": 4, "name": "Filter Lines by Keyword", "item": "https://fixyourtext.com/tools/list-tools/filter-lines-by-keyword.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Filter Lines by Keyword – Search List Items | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/list-tools/">List Tools</a>
+                <span>/</span>
+                <span>Filter Lines by Keyword</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Filter Lines by Keyword</h1>
+
+            <p class="tool-description">Filter your list to show or hide lines matching a specific keyword. Choose case sensitive matching and see how many lines match.</p>
+
+            <div class="tool-intro">
+                <p>
+                This free filter tool helps you search and find specific lines by keyword instantly. It is useful for data analysts, researchers, and anyone organizing large lists of items. The tool supports include and exclude filters with case-sensitive options to organize data by category. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Paste your list here (one item per line):</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter or paste your list here, one item per line..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Filter Options:</h2>
+                    <div class="form-group">
+                        <label for="keywordInput">Keyword to search for:</label>
+                        <input type="text" id="keywordInput" placeholder="Enter keyword..." style="width: 100%; padding: var(--spacing-md); border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: var(--font-size-base);">
+                    </div>
+                    <div class="form-group">
+                        <label>Filter Action:</label>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="radio" name="filterAction" value="show" checked style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <span>Show matching lines only</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="radio" name="filterAction" value="hide" style="width: 18px; height: 18px; accent-color: var(--primary);">
+                                <span>Hide matching lines</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="caseSensitiveCheckbox">
+                            <span>Case sensitive (treat "Apple" and "apple" as different)</span>
+                        </label>
+                    </div>
+                    <div class="button-group">
+                        <button id="filterBtn" class="btn-primary">Filter Lines</button>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Filtered Result:</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="Filtered list will appear here..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Paste or type your list in the input area (one item per line)</li>
+                    <li>Enter the keyword you want to search for</li>
+                    <li>Choose to show matching lines only or hide matching lines</li>
+                    <li>Select case sensitive if you want exact case matching</li>
+                    <li>Click "Filter Lines" to process your list</li>
+                    <li>See the filtered result and count of matching lines</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>Options Explained:</h2>
+                <ul>
+                    <li><strong>Show matching lines only:</strong> Displays only lines that contain the keyword</li>
+                    <li><strong>Hide matching lines:</strong> Displays all lines except those containing the keyword</li>
+                    <li><strong>Case sensitive:</strong> When enabled, "Apple" and "apple" are treated as different. When disabled, case is ignored.</li>
+                </ul>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Filter lines</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/list-tools/clean-empty-lines.html">Clean Empty Lines</a></li>
+                    <li><a href="/tools/list-tools/extract-emails.html">Extract Emails</a></li>
+                    <li><a href="/tools/list-tools/extract-urls.html">Extract URLs</a></li>
+                </ul>
+
+                <h2>Why Use the Filter Lines Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your data stays private</li>
+                    <li>Include and exclude filter options</li>
+                    <li>Case sensitive and case insensitive modes</li>
+                    <li>Handles large lists instantly</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-list-tools.js"></script>
+</body>
+</html>
+

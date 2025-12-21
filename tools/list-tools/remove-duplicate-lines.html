@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free duplicate remover to clean list data instantly. No signup, no tracking. Works in your browser.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/list-tools/remove-duplicate-lines.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Remove Duplicate Lines — Eliminate Duplicates | FixYourText">
+    <meta property="og:description" content="Remove exact duplicate lines from your list. Case sensitive toggle, shows count of duplicates removed. Free, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/list-tools/remove-duplicate-lines.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Remove Duplicate Lines",
+        "description": "Remove exact duplicate lines from your list. Case sensitive toggle, shows count of duplicates removed. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/list-tools/remove-duplicate-lines.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "List Tools", "item": "https://fixyourtext.com/tools/list-tools/"},
+                {"@type": "ListItem", "position": 4, "name": "Remove Duplicate Lines", "item": "https://fixyourtext.com/tools/list-tools/remove-duplicate-lines.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Remove Duplicate Lines – Deduplication Tool | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/list-tools/">List Tools</a>
+                <span>/</span>
+                <span>Remove Duplicate Lines</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Remove Duplicate Lines from Lists</h1>
+
+            <p class="tool-description">Remove exact duplicate lines from your list. Choose case sensitive or insensitive matching, and see how many duplicates were removed.</p>
+
+            <div class="tool-intro">
+                <p>
+                This free duplicate remover tool cleans list data by removing duplicate entries instantly. It is useful for data managers, researchers, and anyone preparing clean datasets for analysis or import. The tool finds and removes exact duplicate lines while preserving order and supports case-sensitive matching options. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Paste your list here (one item per line):</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter or paste your list here, one item per line..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Options:</h2>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="caseSensitiveCheckbox">
+                            <span>Case sensitive (treat "Apple" and "apple" as different)</span>
+                        </label>
+                    </div>
+                    <div class="button-group">
+                        <button id="removeDuplicatesBtn" class="btn-primary">Remove Duplicates</button>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Result (duplicates removed):</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="List with duplicates removed will appear here..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Paste or type your list in the input area (one item per line)</li>
+                    <li>Choose case sensitive if you want "Apple" and "apple" to be treated as different</li>
+                    <li>Click "Remove Duplicates" to process your list</li>
+                    <li>See the result with duplicates removed and count of duplicates found</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>Options Explained:</h2>
+                <ul>
+                    <li><strong>Case sensitive:</strong> When enabled, "Apple" and "apple" are treated as different lines. When disabled, they are considered duplicates.</li>
+                    <li><strong>Remove Duplicates:</strong> Removes all duplicate lines, keeping only the first occurrence of each unique line.</li>
+                </ul>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Remove duplicates</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/list-tools/alphabetize-list.html">Alphabetize List</a></li>
+                    <li><a href="/tools/list-tools/clean-empty-lines.html">Clean Empty Lines</a></li>
+                    <li><a href="/tools/list-tools/sort-lines.html">Sort Lines</a></li>
+                </ul>
+
+                <h2>Why Use the Remove Duplicate Lines Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your data stays private</li>
+                    <li>Finds and removes exact duplicate lines</li>
+                    <li>Preserves order of first occurrence</li>
+                    <li>Case sensitive or insensitive options</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-list-tools.js"></script>
+</body>
+</html>
+

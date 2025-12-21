@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free text repeater to duplicate text multiple times. No signup, no tracking. Works instantly in browser.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/text-formatting/text-repeater.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Text Repeater — Repeat Text Multiple Times | FixYourText">
+    <meta property="og:description" content="Repeat text X times with custom separators (newline, space, comma). Fast, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/text-formatting/text-repeater.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Text Repeater",
+        "description": "Repeat text multiple times with custom separators. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/text-formatting/text-repeater.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "Text Formatting", "item": "https://fixyourtext.com/tools/text-formatting/"},
+                {"@type": "ListItem", "position": 4, "name": "Text Repeater", "item": "https://fixyourtext.com/tools/text-formatting/text-repeater.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Text Repeater – Repeat Text Tool | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/text-formatting/">Text Formatting</a>
+                <span>/</span>
+                <span>Text Repeater</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Repeat Text Tool</h1>
+
+            <p class="tool-description">Repeat any text a specific number of times with your choice of separator between each repetition.</p>
+
+            <div class="tool-intro">
+                <p>
+                This free text repeater tool duplicates text multiple times with optional separators instantly. It is useful for content creators, developers, and anyone who needs to generate repeated patterns or test data. The tool supports no separator, space, comma, newline, or custom separator options for flexible output. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Text to repeat:</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter the text you want to repeat..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Repetition Settings:</h2>
+                    
+                    <div class="form-group">
+                        <label for="repeatCount">Number of times (1-1000):</label>
+                        <input 
+                            type="number" 
+                            id="repeatCount" 
+                            min="1" 
+                            max="1000" 
+                            value="3"
+                            aria-label="Number of repetitions"
+                        >
+                        <p class="form-help">Maximum 1000 repetitions to prevent performance issues</p>
+                    </div>
+
+                    <h2 style="margin-top: var(--spacing-lg);">Separator:</h2>
+                    <div class="button-group">
+                        <button id="newlineBtn" class="btn-primary" data-separator="newline">
+                            Newline
+                        </button>
+                        <button id="spaceBtn" class="btn-primary" data-separator="space">
+                            Space
+                        </button>
+                        <button id="commaBtn" class="btn-primary" data-separator="comma">
+                            Comma
+                        </button>
+                        <button id="noneBtn" class="btn-primary" data-separator="none">
+                            None
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Result:</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="Repeated text will appear here..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Enter the text you want to repeat in the input area</li>
+                    <li>Enter how many times you want it repeated (1-1000)</li>
+                    <li>Choose a separator or select "None" for no separator</li>
+                    <li>See the result instantly</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>Separator Options Explained:</h2>
+                <ul>
+                    <li><strong>Newline:</strong> Each repetition on a new line</li>
+                    <li><strong>Space:</strong> Each repetition separated by a space</li>
+                    <li><strong>Comma:</strong> Each repetition separated by a comma and space</li>
+                    <li><strong>None:</strong> Repetitions joined directly together</li>
+                </ul>
+
+                <h2>Example:</h2>
+                <p><strong>Input:</strong> "hello" repeated 3 times with space separator</p>
+                <p><strong>Output:</strong></p>
+                <pre>hello hello hello</pre>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Repeat with newline separator</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/text-formatting/reverse-text.html">Reverse Text</a></li>
+                    <li><a href="/tools/list-tools/merge-split-lines.html">Merge/Split Lines</a></li>
+                    <li><a href="/tools/list-tools/remove-duplicate-lines.html">Remove Duplicate Lines</a></li>
+                </ul>
+
+                <h2>Why Use the Text Repeater Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your text stays private</li>
+                    <li>Multiple separator options for flexibility</li>
+                    <li>Generate test data and patterns instantly</li>
+                    <li>Works with any text and numbers</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-text-formatting.js"></script>
+</body>
+</html>

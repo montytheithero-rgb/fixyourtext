@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free list tools for text and data manipulation. Sort, filter, extract, randomize, and clean lists. No signup.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/list-tools/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="List Tools — Manage and Process Lists | FixYourText">
+    <meta property="og:description" content="10+ list management tools: alphabetize, remove duplicates, sort, reverse, shuffle, filter, extract emails/URLs, merge/split lines. Free, client-side.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/list-tools/">
+    <meta property="og:type" content="website">
+    
+    <title>Free List Tools – Text & Data Manipulation | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+    
+    <style>
+        .tools-section {
+            margin-bottom: 60px;
+        }
+
+        .tools-section h2 {
+            color: #1e293b;
+            margin-bottom: 30px;
+            font-size: 1.875rem;
+            border-bottom: 2px solid #0ea5e9;
+            padding-bottom: 15px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .tool-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .tool-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+            border-color: #0ea5e9;
+        }
+
+        .tool-card h3 {
+            color: #0ea5e9;
+            margin: 0 0 10px 0;
+            font-size: 1.125rem;
+        }
+
+        .tool-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin: 0 0 15px 0;
+            line-height: 1.5;
+        }
+
+        .tool-card a {
+            display: inline-block;
+            color: #0ea5e9;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .tool-card a:hover {
+            border-bottom-color: #0ea5e9;
+        }
+
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <span>List Tools</span>
+            </nav>
+
+            <!-- Page Header -->
+            <h1>Free Online List Tools</h1>
+
+            <p class="tool-description">Manage and process your lists with powerful, client-side tools. Alphabetize, sort, remove duplicates, filter, extract data, and more.</p>
+
+            <!-- Tools Section -->
+            <section class="tools-section">
+                <h2>List Management Tools</h2>
+                <div class="tools-grid">
+                    <!-- Alphabetize List -->
+                    <div class="tool-card">
+                        <h3>🔤 Alphabetize List</h3>
+                        <p>Sort lines alphabetically A→Z or Z→A, with case sensitive/insensitive options and duplicate handling.</p>
+                        <a href="/tools/list-tools/alphabetize-list.html">Use Tool →</a>
+                    </div>
+
+                    <!-- Remove Duplicate Lines -->
+                    <div class="tool-card">
+                        <h3>🔄 Remove Duplicate Lines</h3>
+                        <p>Remove exact duplicate lines from your list. Case sensitive toggle and count of duplicates removed.</p>
+                        <a href="/tools/list-tools/remove-duplicate-lines.html">Use Tool →</a>
+                    </div>
+
+                    <!-- Sort Lines -->
+                    <div class="tool-card">
+                        <h3>📊 Sort Lines</h3>
+                        <p>Sort lines alphabetically, by length (shortest/longest first). Multiple sorting options available.</p>
+                        <a href="/tools/list-tools/sort-lines.html">Use Tool →</a>
+                    </div>
+
+                    <!-- Reverse List -->
+                    <div class="tool-card">
+                        <h3>↩ Reverse List</h3>
+                        <p>Reverse the order of lines in your list. Simple one-button operation to flip line order.</p>
+                        <a href="/tools/list-tools/reverse-list.html">Use Tool →</a>
+                    </div>
+
+                    <!-- Randomize Lines -->
+                    <div class="tool-card">
+                        <h3>🎲 Randomize Lines</h3>
+                        <p>Randomly shuffle the order of lines in your list. Different result each time you click.</p>
+                        <a href="/tools/list-tools/randomize-lines.html">Use Tool →</a>
+                    </div>
+
+                    <!-- Clean Empty Lines -->
+                    <div class="tool-card">
+                        <h3>🧹 Clean Empty Lines</h3>
+                        <p>Remove completely blank lines and lines with only whitespace. Option to trim each line.</p>
+                        <a href="/tools/list-tools/clean-empty-lines.html">Use Tool →</a>
+                    </div>
+
+                    <!-- Filter Lines by Keyword -->
+                    <div class="tool-card">
+                        <h3>🔍 Filter Lines by Keyword</h3>
+                        <p>Show or hide lines matching a keyword. Case sensitive toggle and count of matching lines.</p>
+                        <a href="/tools/list-tools/filter-lines-by-keyword.html">Use Tool →</a>
+                    </div>
+
+                    <!-- Extract Emails -->
+                    <div class="tool-card">
+                        <h3>📧 Extract Emails</h3>
+                        <p>Scan text and extract all email addresses. Remove duplicates option and count of emails found.</p>
+                        <a href="/tools/list-tools/extract-emails.html">Use Tool →</a>
+                    </div>
+
+                    <!-- Extract URLs -->
+                    <div class="tool-card">
+                        <h3>🔗 Extract URLs</h3>
+                        <p>Scan text and extract all URLs (http, https, ftp, www). Remove duplicates option and count display.</p>
+                        <a href="/tools/list-tools/extract-urls.html">Use Tool →</a>
+                    </div>
+
+                    <!-- Merge/Split Lines -->
+                    <div class="tool-card">
+                        <h3>🔀 Merge/Split Lines</h3>
+                        <p>Merge lines with separators or split text by separators. Multiple separator options available.</p>
+                        <a href="/tools/list-tools/merge-split-lines.html">Use Tool →</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
+

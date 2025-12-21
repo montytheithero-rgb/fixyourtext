@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free reverse list tool to flip line order. No signup, no tracking. Works instantly in your browser.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/list-tools/reverse-list.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Reverse List — Flip Line Order | FixYourText">
+    <meta property="og:description" content="Reverse the order of lines in your list. Simple one-button operation to flip line order. Free, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/list-tools/reverse-list.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Reverse List",
+        "description": "Reverse the order of lines in your list. Simple one-button operation to flip line order. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/list-tools/reverse-list.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "List Tools", "item": "https://fixyourtext.com/tools/list-tools/"},
+                {"@type": "ListItem", "position": 4, "name": "Reverse List", "item": "https://fixyourtext.com/tools/list-tools/reverse-list.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Reverse List – Reverse Order Lines | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/list-tools/">List Tools</a>
+                <span>/</span>
+                <span>Reverse List</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Reverse List Order</h1>
+
+            <p class="tool-description">Reverse the order of lines in your list. The last line becomes the first, and the first line becomes the last.</p>
+
+            <div class="tool-intro">
+                <p>
+                This free reverse list tool flips the order of items in your list instantly. It is useful for anyone who needs to reverse sort order, create countdowns, or arrange items in opposite sequence. The tool maintains all item content while simply reversing the order for quick organizational changes. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Paste your list here (one item per line):</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter or paste your list here, one item per line..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Action:</h2>
+                    <div class="button-group">
+                        <button id="reverseBtn" class="btn-primary">Reverse List</button>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Reversed Result:</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="Reversed list will appear here..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Paste or type your list in the input area (one item per line)</li>
+                    <li>Click "Reverse List" to flip the order of all lines</li>
+                    <li>See the reversed result in the output area</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>What This Tool Does:</h2>
+                <ul>
+                    <li>Reverses the order of all lines in your list</li>
+                    <li>The last line becomes the first line</li>
+                    <li>The first line becomes the last line</li>
+                    <li>All lines in between are reversed accordingly</li>
+                </ul>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Reverse list</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/list-tools/sort-lines.html">Sort Lines</a></li>
+                    <li><a href="/tools/list-tools/randomize-lines.html">Randomize Lines</a></li>
+                    <li><a href="/tools/list-tools/merge-split-lines.html">Merge/Split Lines</a></li>
+                </ul>
+
+                <h2>Why Use the Reverse List Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your data stays private</li>
+                    <li>One-click reverse operation</li>
+                    <li>Preserves all item content and formatting</li>
+                    <li>Perfect for changing sort order quickly</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-list-tools.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free HTML stripper to remove tags and clean text. No signup, no tracking. Works instantly in browser.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/text-formatting/strip-html.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Strip HTML Tags — Remove HTML from Text | FixYourText">
+    <meta property="og:description" content="Remove HTML tags and optionally decode HTML entities. Fast, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/text-formatting/strip-html.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Strip HTML Tags",
+        "description": "Remove HTML tags and decode entities from text. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/text-formatting/strip-html.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "Text Formatting", "item": "https://fixyourtext.com/tools/text-formatting/"},
+                {"@type": "ListItem", "position": 4, "name": "Strip HTML Tags", "item": "https://fixyourtext.com/tools/text-formatting/strip-html.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Strip HTML Tags – HTML Removal Tool | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/text-formatting/">Text Formatting</a>
+                <span>/</span>
+                <span>Strip HTML Tags</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Strip HTML Tags from Text</h1>
+
+            <p class="tool-description">Remove all HTML tags from your text and optionally decode HTML entities to plain text.</p>
+
+            <div class="tool-intro">
+                <p>
+                This free HTML stripper tool removes all tags and converts HTML to plain text instantly. It is useful for content creators, developers, and anyone extracting text from web content or emails. The tool strips all HTML formatting while optionally decoding entities and preserving paragraph breaks as needed. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Paste your HTML here:</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter or paste your HTML code here..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Strip Options:</h2>
+                    <div class="button-group">
+                        <button id="stripTagsBtn" class="btn-primary" data-action="strip">
+                            Strip Tags
+                        </button>
+                    </div>
+
+                    <h2 style="margin-top: var(--spacing-lg);">Options:</h2>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="decodeEntitiesCheckbox" checked>
+                            <span>Decode HTML Entities</span>
+                        </label>
+                        <p class="checkbox-help">Converts &amp;amp; → &, &lt; → <, &quot; → ", etc.</p>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="preserveLineBreaksCheckbox" checked>
+                            <span>Preserve Line Breaks</span>
+                        </label>
+                        <p class="checkbox-help">Keep line breaks from &lt;br&gt;, &lt;p&gt;, &lt;div&gt; tags</p>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="trimSpacesCheckbox" checked>
+                            <span>Trim Extra Spaces</span>
+                        </label>
+                        <p class="checkbox-help">Remove extra whitespace after tag removal</p>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Result:</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="Plain text without HTML will appear here..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Paste or type your HTML code in the input area</li>
+                    <li>Click "Strip Tags" to remove all HTML markup</li>
+                    <li>Optionally decode HTML entities and preserve line breaks</li>
+                    <li>See the plain text result instantly</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>What Gets Removed:</h2>
+                <ul>
+                    <li>All HTML tags: &lt;p&gt;, &lt;div&gt;, &lt;span&gt;, &lt;br&gt;, etc.</li>
+                    <li>Attributes: class, id, style, href, src, etc.</li>
+                    <li>Scripts and styles: &lt;script&gt;, &lt;style&gt; tags</li>
+                    <li>Comments and doctype declarations</li>
+                </ul>
+
+                <h2>HTML Entities:</h2>
+                <ul>
+                    <li>&amp;amp; → &amp;</li>
+                    <li>&amp;lt; → &lt;</li>
+                    <li>&amp;gt; → &gt;</li>
+                    <li>&amp;quot; → "</li>
+                    <li>&amp;apos; → '</li>
+                    <li>&amp;nbsp; → (space)</li>
+                </ul>
+
+                <h2>Example:</h2>
+                <p><strong>Input:</strong></p>
+                <pre>&lt;p&gt;Hello &lt;strong&gt;World&lt;/strong&gt;!&lt;/p&gt;</pre>
+                <p><strong>Output:</strong></p>
+                <pre>Hello World!</pre>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Strip tags</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/text-formatting/escape-unescape-html.html">Escape/Unescape HTML</a></li>
+                    <li><a href="/tools/text-formatting/remove-emojis.html">Remove Emojis</a></li>
+                    <li><a href="/tools/text-formatting/trim-whitespace.html">Trim Whitespace</a></li>
+                </ul>
+
+                <h2>Why Use the Strip HTML Tags Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your content stays private</li>
+                    <li>Removes all HTML tags and formatting</li>
+                    <li>Options to decode entities and preserve breaks</li>
+                    <li>Perfect for extracting text from web content</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-text-formatting.js"></script>
+</body>
+</html>

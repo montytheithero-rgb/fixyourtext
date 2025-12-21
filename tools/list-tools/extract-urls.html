@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free URL extractor to find all links in text. No signup, no tracking. Works instantly in your browser.">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <link rel="canonical" href="https://fixyourtext.com/tools/list-tools/extract-urls.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Extract URLs — Find All URLs in Text | FixYourText">
+    <meta property="og:description" content="Scan text and extract all URLs (http, https, ftp, www). Remove duplicates option and count of URLs found. Free, client-side, no signup.">
+    <meta property="og:url" content="https://fixyourtext.com/tools/list-tools/extract-urls.html">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Extract URLs",
+        "description": "Scan text and extract all URLs (http, https, ftp, www). Remove duplicates option and count of URLs found. Client-side, no signup, no tracking.",
+        "url": "https://fixyourtext.com/tools/list-tools/extract-urls.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fixyourtext.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://fixyourtext.com/tools/"},
+                {"@type": "ListItem", "position": 3, "name": "List Tools", "item": "https://fixyourtext.com/tools/list-tools/"},
+                {"@type": "ListItem", "position": 4, "name": "Extract URLs", "item": "https://fixyourtext.com/tools/list-tools/extract-urls.html"}
+            ]
+        }
+    }
+    </script>
+    
+    <title>Extract URLs – Link Extractor Tool | FixYourText</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <div class="tool-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/#tools">Tools</a>
+                <span>/</span>
+                <a href="/tools/list-tools/">List Tools</a>
+                <span>/</span>
+                <span>Extract URLs</span>
+            </nav>
+
+            <!-- Tool Header -->
+            <h1>Extract URLs from Text</h1>
+
+            <p class="tool-description">Scan your text and extract all URLs. Supports http://, https://, ftp://, and www. patterns. Optionally remove duplicates and see how many URLs were found.</p>
+
+            <div class="tool-intro">
+                <p>
+                This free URL extractor tool finds all links in text instantly. It is useful for researchers, developers, and anyone gathering hyperlinks from documents or web content. The tool automatically detects and lists all valid URLs and optionally removes duplicates for clean link lists. It works entirely in your browser with no signup required, no data collection, and no tracking.
+                </p>
+            </div>
+
+            <!-- AD PLACEHOLDER 1 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Tool UI -->
+            <div class="tool-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <label for="inputText">Paste your text here:</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter or paste your text here. URLs will be extracted..." 
+                        aria-label="Input text area"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearInputBtn" class="btn-secondary">Clear</button>
+                        <span class="char-count" aria-live="polite">0 characters</span>
+                    </div>
+                </div>
+
+                <!-- Controls Section -->
+                <div class="controls-section">
+                    <h2>Options:</h2>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="removeDuplicatesCheckbox">
+                            <span>Remove duplicate URLs</span>
+                        </label>
+                    </div>
+                    <div class="button-group">
+                        <button id="extractBtn" class="btn-primary">Extract URLs</button>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div class="output-section">
+                    <label for="outputText">Extracted URLs (one per line):</label>
+                    <textarea 
+                        id="outputText" 
+                        placeholder="Extracted URLs will appear here, one per line..." 
+                        readonly 
+                        aria-label="Output text area"
+                    ></textarea>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="btn-secondary">📋 Copy</button>
+                        <button id="downloadBtn" class="btn-secondary">⬇ Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" aria-live="polite" role="status"></div>
+
+            <!-- AD PLACEHOLDER 2 -->
+            <!-- AD CODE HERE - Place ad code below this line -->
+
+            <!-- Info Section -->
+            <div class="tool-info">
+                <h2>How to Use:</h2>
+                <ol>
+                    <li>Paste or type your text in the input area</li>
+                    <li>Optionally check "Remove duplicate URLs" to eliminate duplicates</li>
+                    <li>Click "Extract URLs" to scan and extract all URLs</li>
+                    <li>See the extracted URLs in the output area (one URL per line)</li>
+                    <li>See the count of URLs found in the status message</li>
+                    <li>Click "Copy" to copy to clipboard or "Download" to save as a file</li>
+                </ol>
+
+                <h2>What This Tool Does:</h2>
+                <ul>
+                    <li>Scans your text for URLs using regex patterns</li>
+                    <li>Extracts URLs matching http://, https://, ftp://, and www. patterns</li>
+                    <li>Displays each URL on a separate line</li>
+                    <li>Optionally removes duplicate URLs</li>
+                    <li>Shows the total count of URLs found</li>
+                </ul>
+
+                <h2>URL Patterns Supported:</h2>
+                <ul>
+                    <li><strong>http://</strong> - Standard HTTP URLs</li>
+                    <li><strong>https://</strong> - Secure HTTPS URLs</li>
+                    <li><strong>ftp://</strong> - FTP URLs</li>
+                    <li><strong>www.</strong> - URLs starting with www.</li>
+                </ul>
+
+                <h2>Keyboard Shortcuts:</h2>
+                <ul>
+                    <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> (or <kbd>Cmd</kbd> + <kbd>Enter</kbd>): Extract URLs</li>
+                    <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Copy when output is focused</li>
+                </ul>
+
+                <h2>Related Tools:</h2>
+                <ul>
+                    <li><a href="/tools/list-tools/filter-lines-by-keyword.html">Filter Lines by Keyword</a></li>
+                    <li><a href="/tools/list-tools/extract-emails.html">Extract Emails</a></li>
+                    <li><a href="/tools/list-tools/merge-split-lines.html">Merge/Split Lines</a></li>
+                </ul>
+
+                <h2>Why Use the URL Extractor Tool?</h2>
+                <ul>
+                    <li>Works instantly in your browser - no downloads needed</li>
+                    <li>Completely free - no signup or registration required</li>
+                    <li>No data collection or tracking - your links stay private</li>
+                    <li>Finds all HTTP, HTTPS, and FTP links</li>
+                    <li>Option to remove duplicate URLs</li>
+                    <li>Works with large documents and web content</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note">
+        <p>No signup · No tracking · Client-side only</p>
+    </section>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/tools-list-tools.js"></script>
+</body>
+</html>
+
