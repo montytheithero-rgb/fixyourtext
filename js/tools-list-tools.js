@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // LIST TOOLS - CLEAN VERSION
 // ============================================
 // 10 List Tools: Alphabetize, Remove Duplicates, Sort, Reverse, Randomize, Clean, Filter, Extract Emails, Extract URLs, Merge/Split
@@ -1049,7 +1049,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function extractUrls(text, removeDuplicates) {
-        const urlRegex = /(https?:\/\/[^\s]+|ftp:\/\/[^\s]+|www\.[^\s]+)/gi;
+        const urlRegex = /(https?:\/\/[^\s<>]+|ftp:\/\/[^\s<>]+|www\.[^\s<>]+)/gi;
         const urls = text.match(urlRegex) || [];
         
         if (removeDuplicates) {
