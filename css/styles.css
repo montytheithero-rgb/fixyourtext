@@ -165,6 +165,28 @@ main {
     text-decoration: none;
 }
 
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.header-logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.header-logo img {
+    width: 40px;
+    height: 40px;
+}
+
 .nav {
     display: flex;
     gap: var(--spacing-2xl);

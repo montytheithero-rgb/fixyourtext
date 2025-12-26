@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="24" cy="24" r="22" fill="#0EA5E9" opacity="0.1"/>
+  <circle cx="24" cy="24" r="20" fill="#0EA5E9"/>
+  
+  <!-- Text icon (stylized "T" for Text) -->
+  <path d="M16 12H32M24 12V36" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Checkmark accent -->
+  <path d="M28 28L31 31L36 26" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+</svg>
