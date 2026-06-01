@@ -1,5 +1,4 @@
 {
-    "rewrites": [],
     "redirects": [
       {
         "source": "/:path*",
@@ -7,17 +6,6 @@
           {
             "type": "host",
             "value": "www.fixyourtext.com"
-          }
-        ],
-        "destination": "https://fixyourtext.com/:path*",
-        "permanent": true
-      },
-      {
-        "source": "/:path*",
-        "has": [
-          {
-            "type": "protocol",
-            "value": "http"
           }
         ],
         "destination": "https://fixyourtext.com/:path*",
